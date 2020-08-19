@@ -17,7 +17,21 @@ module.exports = {
                 use: {
                     loader: 'babel-loader', //conveter o arquivo
                 }
+            },
+            {
+                test: /\.css$/,
+                exclude: /node_modules/,
+                use: [
+                    { loader: 'style-loader' },
+                    { loader: 'css-loader' },
+                ]
+            },
+            {
+                test: /.*\.(gif|png|jpe?g)$/i,  //testar as extresões 
+                use: {
+                    loader: 'file-loader',
+                }
             }
         ]
-    }
+    },
 };
