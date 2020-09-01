@@ -19,13 +19,18 @@
     "prettier"
   ],
   "rules": {
+    "no-underscore-dangle": "off",
     "class-methods-use-this":"off",
+    "prettier/prettier": "error",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error", { "argsIgorePattern": "_"}
+    ],
     "import/extensions": [
       "error",
       "ignorePackages",
       {
         "ts": "never",
-        "prettier/prettier": "error"
       }
     ]
   },
