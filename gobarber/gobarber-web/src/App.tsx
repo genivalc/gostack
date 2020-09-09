@@ -1,18 +1,22 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-import SinIn from './pages/SignIn';
-//import SinUp from './pages/SignUp';
+
 import GlobalStyle from './styles/global';
 
 import AppProvider from './hooks';
 
+import Routes from './routes';
+
 const App: React.FC = () => (
-<>
-    <AppProvider>
-      <SinIn />
-    </AppProvider >
+  <>
+    <Router>
+      <AppProvider>
+        <Routes />
+      </AppProvider >
 
       <GlobalStyle />
+    </Router>
   </>
 );
 
