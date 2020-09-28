@@ -3,7 +3,7 @@ import FakeHashProvider from '../providers/HashProvider/fakes/FakesHashProvider'
 import FakeUsersRepository from '../repositories/fakes/FakesUsersRepository';
 import CreateUserService from './CreateUserService';
 
-describe('CreateUser', () => {
+describe('UpdateUserAvatar', () => {
   it('should be able to create a new user', async () => {
     const fakeUsersRepository = new FakeUsersRepository();
     const fakeHashProvider = new FakeHashProvider();
