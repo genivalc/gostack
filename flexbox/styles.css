@@ -24,8 +24,10 @@ input, button {
 header#main-header{
 
     height: 46px;
-    background: #f1f1f1;
+    background: #fffffe;
     box-shadow: 0 1px 1px rgba(0, 0,0, 0.25);
+    position: relative;
+    z-index: 1;
 }
 
 header#main-header .content{
@@ -73,7 +75,7 @@ header#main-header div.side input{
     color: #667581;
     font-size: 12px;
     font-weight: bold;
-    background: #F5F8FA url('/images/search.png' )  no-repeat 200px center;
+    background: #F5F8FA url('/images/search.svg' )  no-repeat 200px center;
 }
 
 header#main-header div.side img{
@@ -83,18 +85,107 @@ header#main-header div.side img{
         margin: 0 15px;
 }
 
-header#main-header div.side button{
+header#main-header .side button {
+    background-color: #3bb9e3;
     height: 34px;
-    background: #3bb9e3;
+    
+    width: 90px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+  
+    border: 0;
+    border-radius: 16px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
+div.banner {
+    height: 380px;
+    width: 100%;
+    background: #3bb9e3 url('https://pbs.twimg.com/profile_banners/623144595/1546617072/1080x360' )no-repeat bottom center;
+    background-size: cover;
+}
+
+div.bar {
+    height: 59px;
+    background: #fffffe;
+    box-shadow: 0 1px 3px rgna(0,0,0,0.25);
+}
+
+div.bar .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 285px;
+    height: 100%;
+}
+
+div.bar .content ul {
+    display: flex;
+    list-style: none;
+    height: 100%;
+}
+
+div.bar .content ul li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    position: relative;
+}
+/* Adicionar um elemento antes de fechar */
+div.bar .content ul li.active::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #3bb9e3;
+  }
+
+div.bar .content ul li span{
+    color: #667580;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+div.bar .content ul li strong{
+    color: #667580;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 2px;
+}
+
+div.bar .content ul li.active strong{
+    color: #3bb9e3;
+}
+
+div.bar .content .actions {
+    display: flex;
+}
+
+div.bar .content .actions button{
+    height: 34px;
+    
     display: flex;
     align-items: center;
     justify-content: center;
 
     width: 90px;
     font-weight: bold;
+    color: #3bb9e3;
     font-size: 14px;
-    color: #f1f1f1;
-    border: 0;
-    border-radius: 16%;
+    border: 1px solid #3bb9e3;
+    border-radius: 16px;
+    
+    margin-right: 20px;
 }
+
+li:hover, button:hover, a:hover {
+    background-color:  #04eeff;
+  }
