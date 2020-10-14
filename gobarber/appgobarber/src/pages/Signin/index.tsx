@@ -18,7 +18,7 @@ import logoImg from '../../assets/logo.png';
 
 import { Container, Title, ForgotPassword, ForgotPasswordText, CreateAccountButton, CreateAccountButtonText } from './styles';
 
-interface SignInFormData{
+interface SignInFormData {
   email: string;
   password: string;
 }
@@ -31,7 +31,7 @@ const SignIn: React.FC = () => {
 
   const { signIn, user } = useAuth();
 
-  const handleSignIn = useCallback(async(data: SignInFormData) => {
+  const handleSignIn = useCallback(async (data: SignInFormData) => {
     try {
       formRef.current?.setErrors({});
 
@@ -100,13 +100,17 @@ const SignIn: React.FC = () => {
                 placeholder="Senha"
                 secureTextEntry
                 returnKeyType="send"
-                onSubmitEditing={() => formRef.current?.submitForm()}
+                onSubmitEditing={() => {
+                  formRef.current?.submitForm();
+                }}
               />
-
-              <Button onPress={() => {
-                formRef.current?.submitForm();
-              }}> Entrar
-        </Button>
+              <Button
+                onPress={() => {
+                  formRef.current?.submitForm();
+                }}
+              >
+                Entrar
+              </Button>
             </Form>
 
             <ForgotPassword onPress={() => { }}>
